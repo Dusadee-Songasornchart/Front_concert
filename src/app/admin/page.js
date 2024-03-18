@@ -9,7 +9,7 @@ export default function Home() {
     <div>
     <Sidebar/>
     <div className="body">
-      helooooooooooooooooooooooooooooooooooooooooo
+      helooooooooooooooooooooooooooooooooooooooooodd
     </div>
     </div>
   );

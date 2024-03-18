@@ -1,3 +1,209 @@
 .body{
-    margin-left: 200px;
+    margin-left: 240px;
+}
+
+.all-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.card-seat{
+    width: 400px;
+    height: 234px;
+    background-color: #0070A4;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-reserve{
+    width: 400px;
+    height: 234px;
+    background-color: #00A58B;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-cancle{
+    width: 400px;
+    height: 234px;
+    background-color: #E84E4E;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.all-card h2{
+    margin-top: 4px;
+    color: white;
+    font-size: 24px;
+}
+.all-card h1{
+    color: white;
+    font-size: 60px;
+}
+
+.tabbar{
+    margin-left: 16px;
+    font-size: 22px;
+
+}
+.tabbar button {
+    color: #5C5C5C; 
+    
+  }
+
+.tabbar button.active {
+    color: #1692EC; 
+    border-bottom: solid 1px #1692EC;
+    font-weight: bold;
+  }
+.layout-table{
+    padding: 60px;
+}
+table,th,td {
+    text-align: left;
+    border: 1px solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 80px;
+}
+td{
+    width: 25%;
+    font-weight: 400;
+    font-size: 16px;
+}
+th{
+    font-size: 20px;
+    font-weight: 600;
+}
+.success-message {
+    display: flex;
+    flex-direction: row;
+    position:fixed;
+    top: 24px; 
+    right: 24px; 
+    background-color: #D0E7D2; 
+    color: black;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px; 
+    font-size: 14px; 
+    font-weight: 400;
+    border-radius: 6px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease-in-out; 
+}
+@media screen and (max-width: 1024px) {
+    .card-seat{
+        width: 160px;
+        height: 220px;
+        background-color: #0070A4;
+        margin-top: 48px;
+        margin-bottom: 48px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card-reserve{
+        width: 160px;
+        height: 220px;
+        background-color: #00A58B;
+        margin-top: 48px;
+        margin-bottom: 48px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card-cancle{
+        width: 160px;
+        height: 220px;
+        background-color: #E84E4E;
+        margin-top: 48px;
+        margin-bottom: 48px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .all-card h2{
+        margin-top: 4px;
+        color: white;
+        font-size: 22px;
+    }
+    .all-card h1{
+        color: white;
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .body{
+        margin-left: 0px;
+    }
+    .card-seat{
+        width: 150px;
+        height: 200px;
+        margin-top: 100px;
+        margin-bottom: 48px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-reserve,.card-cancle{
+        width: 100px;
+        height: 200px;
+        margin-top: 100px;
+        margin-bottom: 48px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .all-card{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .all-card h2{
+        margin-top: 4px;
+        color: white;
+        font-size: 18px;
+    }
+    .all-card h1{
+        color: white;
+        font-size: 24px;
+    }
+
+    table,th,td {
+        margin-top: 40px;
+    }
 }

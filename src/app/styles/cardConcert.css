@@ -1,0 +1,332 @@
+
+.card{
+    width:auto;
+    padding: 40px;
+    height: auto;
+    background-color: white;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #C2C2C2 ;
+}
+
+.card h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: #1692EC;
+    width: auto;
+    border-bottom: solid 1px #C2C2C2;
+    padding-bottom: 20px;
+}
+
+.card h1{
+    font-size: 32px;
+    font-weight: 600;
+    color: #1692EC;
+    width: auto;
+    border-bottom: solid 1px #C2C2C2;
+    padding-bottom: 20px;
+}
+
+.card p{
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.card-footer{
+    padding-top: 32px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-amount{
+    display: flex;
+    flex-direction: row;
+}
+
+.card form{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.card-firstline{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+
+.concert-finput{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    flex-grow: 5;
+    margin-right: 20px;
+}
+.concert-linput{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    flex-grow: 5;
+    margin-right: 20px;
+    position: relative;
+}
+
+.concert-linput:before {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 55px;
+    bottom: 0;
+    width: 20px;
+    background: url("/user3.svg") center / contain no-repeat;
+  }
+.card input{
+    
+    width: 100%;
+    margin-top: 20px;
+    border:solid 1px #5C5C5C  ;
+    border-radius: 4px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 12px;
+    padding-left: 12px;
+}
+.card-save-f{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+.card-save{
+    background-color: #1692EC;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    justify-content:center;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.card textarea{
+    width: 100%;
+    height: 160px;
+    margin-top: 20px;
+    border:solid 1px #5C5C5C  ;
+    border-radius: 4px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 12px;
+    padding-left: 12px;
+
+}
+
+.card label{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+.delete-card{
+    height: 60px;
+    width: 180px;
+    border-radius: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #E84E4E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancel-card{
+    height: 60px;
+    width: 180px;
+    border-radius: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #F96464;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserve-card{
+    height: 60px;
+    width: 180px;
+    border-radius: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #1692EC;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-open {
+    overflow: hidden;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-body{
+    background-color: white;
+    height: 256px;
+    width: 422px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 24px;
+}
+.modal-text{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+.modal-button-cancle{
+    background: white;
+    border: solid 1px #C4C4C4;
+    border-radius: 4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.modal-button-Yes{
+    background: #E63946;
+    border-radius: 4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 30px;
+    color: white;
+}
+.modal-footer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media screen and (max-width: 850px) {
+    .card-firstline{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card{
+        width:auto;
+        padding: 20px;
+        height: auto;
+        background-color: white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        border: solid 1px #C2C2C2 ;
+    }
+
+    .card-footer{
+        padding-top: 32px;
+        font-size: 20px;
+        
+    }
+    .delete-card{
+        height: 45px;
+        width: 120px;
+        margin-top: 10px;
+        border-radius: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        background-color: #E84E4E;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cancel-card{
+        height: 45px;
+        width: 120px;
+        margin-top: 10px;
+        border-radius: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        background-color: #F96464;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .reserve-card{
+        height: 45px;
+        width: 120px;
+        margin-top: 10px;
+        border-radius: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        background-color: #1692EC;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card h1{
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .card p{
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+}

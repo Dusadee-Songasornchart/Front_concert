@@ -1,18 +1,19 @@
 "use client";
 import Sidebar from "../components/sidebar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CardConcert from "../components/cardConcert";
 import Createconcert from "../components/createConcert";
 import Success from "../components/success";
+import axios from "axios";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const [overview, setOverview] = useState(true)
   const [create, setCreate] = useState(false);
   const [successCreate, setsuccessCreate] = useState(false);
-  const concerts = [
-    { id: 1, name: "Concert Name 1", des: "Lorem ipsum dolor sit amet consectetur. Elit purus nam gravida porttitor nibh urna sit ornare a. Proin dolor morbi id ornare aenean non.dignissim turpis sed non est orci sed in. Blandit ut purus nunc sed donec commodo morbi diam scelerisque.", amount: "500" },
-    { id: 2, name: "Concert Name 2", des: "i'm hungry", amount: "200" }
-  ];
+  const [concerts,setconcerts] = useState([]);
+  const [num,setNum] = useState([]);
+
 
   const handleClickOverview = () => {
     setCreate(false);
@@ -28,6 +29,28 @@ export default function Home() {
     setOverview(true);
     setsuccessCreate(true);
   };
+
+  const fecthData = async () =>{
+    axios.get(process.env.NEXT_PUBLIC_URI + "/concert").then(
+      (response) =>{
+        setconcerts(response.data)
+      }
+    ).catch(error => {
+      console.log(error);
+    });
+
+    axios.get(process.env.NEXT_PUBLIC_URI + "/concert/num").then(
+      (response) =>{
+        setNum(response.data)
+      }
+    ).catch(error => {
+      console.log(error);
+    });
+  }
+  useEffect(() => {
+    fecthData();
+  }, [])
+
   return (
     <div>
       <Sidebar></Sidebar>
@@ -45,7 +68,7 @@ export default function Home() {
               Total of seats
             </h2>
             <h1>
-              500
+              {num.seat_count}
             </h1>
           </div>
           <div className="card-reserve">
@@ -57,7 +80,7 @@ export default function Home() {
               Reserve
             </h2>
             <h1>
-              120
+              {num.reserve_count}
             </h1>
           </div>
           <div className="card-cancle">
@@ -70,7 +93,7 @@ export default function Home() {
               Cancel
             </h2>
             <h1>
-              12
+              {num.cancel}
             </h1>
           </div>
         </div>

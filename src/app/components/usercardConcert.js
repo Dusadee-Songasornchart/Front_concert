@@ -1,20 +1,62 @@
+import axios from "axios";
 import { Literata } from "next/font/google"
+import { useState } from "react";
+import Success from "./success";
 
 export default function UserCardConcert({ prop }) {
-
+    const [successReserve, setsuccessReserve] = useState(false);
+    const [successCancel, setsuccessCancel] = useState(false);
+    const userid = 100;
+    const username = "dud";
     const findmyid = (list) => {
-        const found = list.find((user) => user === 2);
-        if (found !== undefined) {
-            console.log(true);
-            return true;
-        } else {
-            console.log(false);
-            return false;
+
+        if (list) {
+            const found = list.find((user) => user.userid === userid);
+            
+            if (found !== undefined) {
+                
+                return (true);
+            } else {
+             
+                return (false);
+            }
+        }else{
+            return(false)
         }
     };
+    const handleReserve = (concert_id) => {
+        axios.put(`${process.env.NEXT_PUBLIC_URI}/concert/reserve/${concert_id}`, {
+            userid: userid,
+            username: username
+        }).then((response) => {
+            console.log(response)
+            if(response.data === '200 OK'){
+                setsuccessReserve(true)
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+            }
+        })
+    }
+
+    const handleCancel = (concert_id) => {
+        axios.put(`${process.env.NEXT_PUBLIC_URI}/concert/cancel/${concert_id}`, {
+            userid: userid
+        }).then((response) => {
+            console.log(response)
+            if(response.data === '200 OK'){
+                setsuccessCancel(true)
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+            }
+        })
+    }
+
     return (
         <div className="card">
-            {/* Access and use the prop here */}
+           {successReserve && (<Success state={true} word="Reserve successfully" />)}
+           {successCancel && (<Success state={true} word="Cancel successfully" />)}
             <h1>{prop.name}</h1>
             <p>{prop.des}</p>
             <div className="card-footer">
@@ -25,15 +67,13 @@ export default function UserCardConcert({ prop }) {
                     </svg>
                     {prop.amount}
                 </div>
-                {findmyid(prop.reserve) === true ? (
-                    <button className="cancel-card">
+                {findmyid(prop.user_reserve) === true ? (
+                    <button className="cancel-card" onClick={() => handleCancel(prop.id)}>
                         Cancel
-                        
                     </button>
                 ) : (
-                    <button className="reserve-card">
+                    <button className="reserve-card" onClick={() =>handleReserve(prop.id)}>
                         Reserve
-                        
                     </button>
                 )}
 

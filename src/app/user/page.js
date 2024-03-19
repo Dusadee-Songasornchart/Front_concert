@@ -1,13 +1,28 @@
+'use client'
+import axios from "axios";
 import Sidebar from "../components/sidebar";
 import UserCardConcert from "../components/usercardConcert";
 import Usersidebar from "../components/usersidebar";
+import { useEffect, useState } from "react";
 
 export default function User() {
 
-    const concerts = [
-        { id: 1, name: "Concert Name 1", des: "Lorem ipsum dolor sit amet consectetur. Elit purus nam gravida porttitor nibh urna sit ornare a. Proin dolor morbi id ornare aenean non.dignissim turpis sed non est orci sed in. Blandit ut purus nunc sed donec commodo morbi diam scelerisque.", amount: "500", reserve: [1] },
-        { id: 2, name: "Concert Name 2", des: "i'm hungry", amount: "200", reserve: [1, 2, 3] }
-    ];
+    const [concerts,setconcerts] = useState([]);
+
+    const fecthData = async () =>{
+        axios.get(process.env.NEXT_PUBLIC_URI + "/concert").then(
+          (response) =>{
+            console.log(response)
+            setconcerts(response.data)
+          }
+        ).catch(error => {
+          console.log(error);
+        });
+
+      }
+      useEffect(() => {
+        fecthData();
+      }, [])
 
     return (
         <div>

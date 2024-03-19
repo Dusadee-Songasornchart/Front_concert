@@ -1,25 +1,58 @@
-import { useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import Success from "./success";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+
 
 export default function CardConcert({ prop }) {
     const [modelDelete, setModelDelete] = useState(false);
     const [successDel, setsuccessDel] = useState(false);
+    const router = useRouter();
+
+    const toReloadPage = () => {
+        router.push('/admin')
+        router.refresh();
+    };
 
     const handleModelDel = () => {
         console.log(modelDelete)
         setModelDelete(true)
         document.body.classList.add('modal-open');
     }
+
     const handleConfirmDel = (concert_id) => {
-        console.log(concert_id)
+        deleteCard(concert_id)
         document.body.classList.remove('modal-open')
         setModelDelete(false)
-        setsuccessDel(true)
+
     }
+
     const handleCancelDel = () => {
         document.body.classList.remove('modal-open')
         setModelDelete(false)
     }
+
+    const deleteCard = (concert_id) => {
+        axios.delete(`${process.env.NEXT_PUBLIC_URI}/concert/${concert_id}`)
+            .then(response => {
+                console.log(response);
+                if (response.data === "200 OK") {
+                    setsuccessDel(true)
+                    setTimeout( ()=>{
+                        location.reload();
+                    }, 2000);
+                }
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
+
+    useEffect(() => {
+
+
+    }, [])
 
     return (
         <div className="card">

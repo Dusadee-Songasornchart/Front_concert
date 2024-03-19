@@ -1,9 +1,25 @@
+"use client";
+import { useEffect, useState } from "react";
 import Sidebar from "../../components/sidebar";
+import axios from "axios";
 
 export default function history() {
+  const [data,setData] = useState([]);
+  const fecthData = async () =>{
+    axios.get(process.env.NEXT_PUBLIC_URI + "/concert/noti").then(
+      (response) =>{
+        setData(response.data)
+      }
+    ).catch(error => {
+      console.log(error);
+    });
+  }
 
-  const data = [{ date: "12/09/2024 15:00:00", Username: "Sara John", Concertname: "The festival Int 2024", Action: "Cancel" },
-  { date: "12/09/2024 15:00:00", Username: "Sara John", Concertname: "The festival Int 2024", Action: "Cancel" }]
+  useEffect(() => {
+    fecthData();
+  }, [])
+
+  
   return (
     <div>
       <Sidebar></Sidebar>
@@ -18,8 +34,8 @@ export default function history() {
             </tr>
             {data.map((item, index) => (
               <tr key={index}>
-                <td>{item.date}</td>
-                <td>{item.Username}</td>
+                <td>{item.time}</td>
+                <td>{item.User_name}</td>
                 <td>{item.Concertname}</td>
                 <td>{item.Action}</td>
               </tr>

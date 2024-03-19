@@ -23,7 +23,7 @@ export default function Usersidebar() {
           </svg>
 
         </div>
-        <div className="invisible w-0 md:w-auto h-0 md:h-auto md:visible md:ml-3">Switch to user</div>
+        <div className="invisible w-0 md:w-auto h-0 md:h-auto md:visible md:ml-3">Switch to Admin</div>
       </div>
       </Link>
       <div className="sidebar-logout">

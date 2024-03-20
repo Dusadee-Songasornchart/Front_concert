@@ -30,7 +30,7 @@ export default function UserCardConcert({ prop }) {
             username: username
         }).then((response) => {
             console.log(response)
-            if(response.data === '200 OK'){
+            if(response.status === 200){
                 setsuccessReserve(true)
                 setTimeout(() => {
                     location.reload();
@@ -44,7 +44,7 @@ export default function UserCardConcert({ prop }) {
             userid: userid
         }).then((response) => {
             console.log(response)
-            if(response.data === '200 OK'){
+            if(response.status === 200){
                 setsuccessCancel(true)
                 setTimeout(() => {
                     location.reload();

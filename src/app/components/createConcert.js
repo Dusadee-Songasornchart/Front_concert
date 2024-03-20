@@ -7,21 +7,30 @@ export default function Createconcert({ onSuccess }) {
     const [concertName, setConcertName] = useState("");
     const [seat, setSeat] = useState("");
     const [description, setDescription] = useState("");
+    const [errMsg, seterrMsg] = useState("");
     const createConcert = () => {
-        axios.post(process.env.NEXT_PUBLIC_URI + "/concert", {
-            name: concertName,
-            des: description,
-            amount: seat
-        }).then( (response) =>{
-            console.log(response)
-            if (response.status === 201) {
-                onSuccess();
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
-            }
-        })
+        if (!concertName || !description || !seat) {
+            seterrMsg('Please fill out the information completely.')
+        } else if(seat <= 0){
+            seterrMsg('Please specify a number of seats more than 0.')
+        }
+        else {
+            axios.post(process.env.NEXT_PUBLIC_URI + "/concert", {
+                name: concertName,
+                des: description,
+                amount: seat
+            }).then((response) => {
+                console.log(response)
+                if (response.status === 201) {
+                    onSuccess();
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                } else {
 
+                }
+            })
+        }
     }
 
 
@@ -29,7 +38,27 @@ export default function Createconcert({ onSuccess }) {
     return (
         <div className="card">
             <h2>Create</h2>
+            {errMsg ? (
+                        <p className="errMsg">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={5}
+                                stroke="currentColor"
+                                className="h-5 w-5 md:w-7.5 md:h-7.5 mr-2 md:mr-2 mt-0.5 md:mt-2"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                            {errMsg}
+                        </p>
+                    ) : null}
             <div className="card-firstline">
+                
                 <div className="concert-finput">
                     <label
                         htmlFor="Concertname"

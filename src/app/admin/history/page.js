@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Sidebar from "../../components/sidebar";
 import axios from "axios";
 
-export default function history() {
+export default function History() {
   const [data,setData] = useState([]);
   const fecthData = async () =>{
     axios.get(process.env.NEXT_PUBLIC_URI + "/concert/noti").then(
@@ -26,12 +26,14 @@ export default function history() {
       <div className="body">
         <div className="layout-table">
           <table>
+          <tbody>
             <tr>
               <th>Date</th>
               <th>Username</th>
               <th>Concert Name</th>
               <th>Action</th>
             </tr>
+           
             {data.map((item, index) => (
               <tr key={index}>
                 <td>{item.time}</td>
@@ -40,6 +42,7 @@ export default function history() {
                 <td>{item.Action}</td>
               </tr>
             ))}
+             </tbody>
           </table>
         </div>
       </div>

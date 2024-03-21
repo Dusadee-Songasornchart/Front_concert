@@ -72,13 +72,13 @@ Test Reserve Concert
     Open Browser    ${BASE_URL}user    chrome
     Maximize Browser Window
     Click Element    css=.reserve-card
-    Page Should Contain Element    css=.success
+    Page Should Contain Element    css=.success-message
     Close Browser
 
 Test Cancel Concert
     Open Browser    ${BASE_URL}user    chrome
     Maximize Browser Window
     Click Element    css=.cancel-card
-    Page Should Contain Element    css=.success
+    Page Should Contain Element    css=.success-message
     Close Browser
 

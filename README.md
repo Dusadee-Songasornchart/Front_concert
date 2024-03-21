@@ -1,9 +1,9 @@
 
 ## Getting Started
 
-***You should deploy Back_concert first
+***You should clone Back_concert first***
 
-First, Clone form Github :
+# First, Clone form Github :
 
 ```bash
 git clone https://github.com/Dusadee-Songasornchart/Front_concert.git

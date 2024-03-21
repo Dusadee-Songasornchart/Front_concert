@@ -1,9 +1,60 @@
+
+# Getting Started
+
+You should clone Back_concert first
+
+## Start Project
+First, Clone form Github :
+
+```bash
+git clone https://github.com/Dusadee-Songasornchart/Front_concert.git
+```
+```bash
+cd Front_concert
+```
+
+Second download package with npm
+
+```bash
+npm i
+```
+
+### if you want dev mode
+You have to run dev project:
+
+```bash
+npm run dev
+```
+
+### if you want to build 
+You have to build project:
+
+```bash
+npm run build
+```
+
+And now You can run project:
+
+```bash
+npm run start
+```
+
+## Test Project
+
+install robot framework with python :
+
+```bash
+pip install robotframework
+```
+
+And now you can test
+
+```bash
+robot front.robot
+```
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
-
-First, run the development server:
-
 ```bash
 npm run dev
 # or

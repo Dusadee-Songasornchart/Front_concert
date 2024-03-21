@@ -19,6 +19,14 @@ Second download package with npm
 npm i
 ```
 
+### if you want dev mode
+You have to run dev project:
+
+```bash
+npm run dev
+```
+
+### if you want to build 
 You have to build project:
 
 ```bash

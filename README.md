@@ -1,9 +1,10 @@
 
-## Getting Started
+# Getting Started
 
-***You should clone Back_concert first***
+You should clone Back_concert first
 
-# First, Clone form Github :
+## Start Project
+First, Clone form Github :
 
 ```bash
 git clone https://github.com/Dusadee-Songasornchart/Front_concert.git
@@ -27,7 +28,7 @@ And now You can run project:
 npm run start
 ```
 
-and if you want to test front :
+## Test Project
 
 install robot framework with python :
 

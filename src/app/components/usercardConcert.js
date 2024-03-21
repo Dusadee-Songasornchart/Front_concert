@@ -68,11 +68,11 @@ export default function UserCardConcert({ prop }) {
                     {prop.amount}
                 </div>
                 {findmyid(prop.user_reserve) === true ? (
-                    <button className="cancel-card" onClick={() => handleCancel(prop.id)}>
+                    <button className="cancel-card" id="cancel-card" onClick={() => handleCancel(prop.id)}>
                         Cancel
                     </button>
                 ) : (
-                    <button className="reserve-card" onClick={() =>handleReserve(prop.id)}>
+                    <button className="reserve-card" id="reserve-card" onClick={() =>handleReserve(prop.id)}>
                         Reserve
                     </button>
                 )}

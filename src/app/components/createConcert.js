@@ -83,7 +83,7 @@ export default function Createconcert({ onSuccess }) {
                         Total of seat
                     </label>
                     <input
-                        id="Concertname"
+                        id="amount"
                         type="number"
                         placeholder="Please input your seat"
                         autoComplete="off"

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.8 on win32)" generated="2024-03-21T20:13:30.673077" rpa="false" schemaversion="5">
+<suite id="s1" name="Front" source="d:\datawow\concert\Front_concert\front.robot">
+<test id="s1-t1" name="Test Overview Tab" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:30.866949" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/admin'.</msg>
+<arg>${BASE_URL}admin</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T20:13:30.865948" elapsed="1.582582"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-21T20:13:32.454065" elapsed="0.924058"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=Overview</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:33.379631" elapsed="0.022092"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:33.404726" level="INFO">Clicking element 'id=Overview'.</msg>
+<arg>id=Overview</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:33.402710" elapsed="0.086096"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=Overview_</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-21T20:13:33.489801" elapsed="0.040114"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:33.542557" level="INFO">Current page contains element 'id=Overview_'.</msg>
+<arg>id=Overview_</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:33.531022" elapsed="0.012533"/>
+</kw>
+<status status="PASS" start="2024-03-21T20:13:30.864949" elapsed="2.679602"/>
+</test>
+<test id="s1-t2" name="Test Create Tab" line="20">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:33.546548" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/admin'.</msg>
+<arg>${BASE_URL}admin</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T20:13:33.546548" elapsed="2.391590"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-21T20:13:35.938138" elapsed="0.134491"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=Create</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:36.072629" elapsed="0.011517"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:36.085147" level="INFO">Clicking element 'id=Create'.</msg>
+<arg>id=Create</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:36.084146" elapsed="0.056684"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=Create_concert</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-21T20:13:36.141831" elapsed="0.023651"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:36.173002" level="INFO">Current page contains element 'id=Create_concert'.</msg>
+<arg>id=Create_concert</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:36.166483" elapsed="0.006519"/>
+</kw>
+<status status="PASS" start="2024-03-21T20:13:33.545550" elapsed="2.627452"/>
+</test>
+<test id="s1-t3" name="Test History Page" line="28">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:36.176002" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/admin/history'.</msg>
+<arg>${BASE_URL}admin/history</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T20:13:36.175002" elapsed="2.250852"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-21T20:13:38.426856" elapsed="0.121422"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.layout-table</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:38.548278" elapsed="0.009967"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-21T20:13:38.559754" elapsed="2.169292"/>
+</kw>
+<status status="PASS" start="2024-03-21T20:13:36.174002" elapsed="4.555044"/>
+</test>
+<test id="s1-t4" name="Test DeleteCard" line="34">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:40.731150" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/admin'.</msg>
+<arg>${BASE_URL}admin</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T20:13:40.731150" elapsed="2.401962"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-21T20:13:43.134112" elapsed="0.133038"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.card</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:43.268149" elapsed="0.019056"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:43.288208" level="INFO">Clicking element 'css=.delete-card'.</msg>
+<arg>css=.delete-card</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:43.288208" elapsed="0.080768"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.modal-text</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:43.369978" elapsed="0.016050"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:43.409062" level="INFO">${modal_text} = Are you sure to delete?
+Concert Name 1</msg>
+<var>${modal_text}</var>
+<arg>css=.modal-text</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:43.387032" elapsed="0.023030"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:43.410568" level="INFO">Clicking button 'xpath=//button[@class="modal-button-Yes"]'.</msg>
+<arg>xpath=//button[@class="modal-button-Yes"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:43.410062" elapsed="0.074271"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.success-message</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:43.485333" elapsed="0.013522"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-21T20:13:43.499853" elapsed="2.172291"/>
+</kw>
+<status status="PASS" start="2024-03-21T20:13:40.731150" elapsed="4.940994"/>
+</test>
+<test id="s1-t5" name="Test CreateCard null" line="45">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:45.674086" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/admin'.</msg>
+<arg>${BASE_URL}admin</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T20:13:45.674086" elapsed="2.528435"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-21T20:13:48.202521" elapsed="0.215227"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=Create</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:48.418746" elapsed="0.019062"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:48.438807" level="INFO">Clicking element 'id=Create'.</msg>
+<arg>id=Create</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:48.438807" elapsed="0.218225"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=Create_concert</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-21T20:13:48.658030" elapsed="0.035105"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:48.694136" level="INFO">Clicking element 'css=.card-save'.</msg>
+<arg>css=.card-save</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:48.693135" elapsed="0.060164"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.errMsg</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:48.754300" elapsed="0.012052"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-21T20:13:48.767352" elapsed="2.213095"/>
+</kw>
+<status status="PASS" start="2024-03-21T20:13:45.673085" elapsed="5.308279"/>
+</test>
+<test id="s1-t6" name="Test CreateCard success" line="55">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:50.983361" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/admin'.</msg>
+<arg>${BASE_URL}admin</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T20:13:50.983361" elapsed="2.155228"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-21T20:13:53.138589" elapsed="0.124604"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=Create</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:53.263193" elapsed="0.011932"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:53.276126" level="INFO">Clicking element 'id=Create'.</msg>
+<arg>id=Create</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:53.276126" elapsed="0.064084"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=Create_concert</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-21T20:13:53.340210" elapsed="0.025552"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:53.366771" level="INFO">Typing text 'Concertname98' into text field 'id=Concertname'.</msg>
+<arg>id=Concertname</arg>
+<arg>Concertname98</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:53.366771" elapsed="0.197331"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:53.565101" level="INFO">Typing text '98' into text field 'id=amount'.</msg>
+<arg>id=amount</arg>
+<arg>98</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:53.565101" elapsed="0.067226"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:53.633334" level="INFO">Typing text 'Concertname98' into text field 'id=Description'.</msg>
+<arg>id=Description</arg>
+<arg>Concertname98</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:53.632327" elapsed="0.092428"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:53.724755" level="INFO">Clicking element 'css=.card-save'.</msg>
+<arg>css=.card-save</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:53.724755" elapsed="0.050427"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.success-message</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-21T20:13:53.776171" elapsed="0.013113"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-21T20:13:53.790292" elapsed="2.185759"/>
+</kw>
+<status status="PASS" start="2024-03-21T20:13:50.982361" elapsed="4.994681"/>
+</test>
+<test id="s1-t7" name="Test Reserve Concert" line="68">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:55.978012" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/user'.</msg>
+<arg>${BASE_URL}user</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T20:13:55.978012" elapsed="2.158007"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-21T20:13:58.136019" elapsed="0.127144"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:58.264163" level="INFO">Clicking element 'css=.reserve-card'.</msg>
+<arg>css=.reserve-card</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:13:58.264163" elapsed="0.051794"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:13:58.508927" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-21T20:13:58.508927" level="FAIL">Page should have contained element 'css=.success' but did not.</msg>
+<arg>css=.success</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2024-03-21T20:13:58.316957" elapsed="0.202207">Page should have contained element 'css=.success' but did not.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-21T20:13:58.520162" elapsed="2.115159"/>
+</kw>
+<status status="FAIL" start="2024-03-21T20:13:55.978012" elapsed="4.657309">Page should have contained element 'css=.success' but did not.</status>
+</test>
+<test id="s1-t8" name="Test Cancel Concert" line="75">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:14:00.637285" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/user'.</msg>
+<arg>${BASE_URL}user</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T20:14:00.637285" elapsed="2.176151"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-21T20:14:02.814440" elapsed="0.120356"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:14:02.935797" level="INFO">Clicking element 'css=.cancel-card'.</msg>
+<arg>css=.cancel-card</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T20:14:02.935797" elapsed="0.056202"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T20:14:03.217393" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-21T20:14:03.218410" level="FAIL">Page should have contained element 'css=.success' but did not.</msg>
+<arg>css=.success</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2024-03-21T20:14:02.993010" elapsed="0.225400">Page should have contained element 'css=.success' but did not.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-21T20:14:03.219399" elapsed="2.144058"/>
+</kw>
+<status status="FAIL" start="2024-03-21T20:14:00.637285" elapsed="4.727071">Page should have contained element 'css=.success' but did not.</status>
+</test>
+<status status="FAIL" start="2024-03-21T20:13:30.675083" elapsed="34.691269"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="2" skip="0" id="s1" name="Front">Front</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

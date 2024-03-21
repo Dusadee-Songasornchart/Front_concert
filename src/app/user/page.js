@@ -45,19 +45,5 @@ export default function User() {
                 </div>
             </div>
         </div>
-        // <div>
-        //     <Usersidebar></Usersidebar>
-        //     <div className="body">
-        //         <ul className="">
-        //             {concerts.map((concert, index) => (
-        //                 <li
-        //                     key={index}
-        //                 >
-        //                     <UserCardConcert key={index} prop={concert} />
-        //                 </li>
-        //             ))}
-        //         </ul>
-        //     </div>
-        // </div>
     );
 }

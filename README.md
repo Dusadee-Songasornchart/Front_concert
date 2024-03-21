@@ -1,9 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+***You should deploy Back_concert first
 
+First, Clone form Github :
+
+```bash
+git clone https://github.com/Dusadee-Songasornchart/Front_concert.git
+```bash
+
+Second download package with npm
+
+```bash
+npm i
+```bash
+
+You have to build project:
+
+```bash
+npm run build
+```bash
+
+And now You can run project:
+
+```bash
+npm run start
+```bash
+
+and if you want to test front :
+
+install robot framework with python :
+
+```bash
+pip install robotframework
+```bash
+
+And now you can test
+
+```bash
+robot front.robot
+```bash
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Getting Started
 ```bash
 npm run dev
 # or

@@ -16,6 +16,7 @@ Test Overview Tab
     Click Element    id=Overview
     Wait Until Element Is Visible    id=Overview_
     Page Should Contain Element    id=Overview_
+    Close Browser
 
 Test Create Tab
     Open Browser    ${BASE_URL}admin    chrome
@@ -24,6 +25,8 @@ Test Create Tab
     Click Element    id=Create
     Wait Until Element Is Visible    id=Create_concert
     Page Should Contain Element    id=Create_concert
+    Close Browser
+
 
 Test History Page
     Open Browser    ${BASE_URL}admin/history    chrome
@@ -70,12 +73,12 @@ Test Reserve Concert
     Maximize Browser Window
     Click Element    css=.reserve-card
     Page Should Contain Element    css=.success
-    [Teardown]    Close Browser
+    Close Browser
 
 Test Cancel Concert
     Open Browser    ${BASE_URL}user    chrome
     Maximize Browser Window
     Click Element    css=.cancel-card
     Page Should Contain Element    css=.success
-    [Teardown]    Close Browser
+    Close Browser
 
